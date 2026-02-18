@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Office 365 Password Reset Template</title>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; background-color: #f6f6f6; }
+    .container { max-width: 500px; margin: 20px auto; background-color: #ffffff; border: 1px solid #e0e0e0; }
+    .header { background-color: #0078d4; color: white; padding: 15px 20px; display: flex; align-items: center; }
+    .logo { font-size: 24px; font-weight: bold; margin-right: 10px; }
+    .header-text { font-size: 14px; opacity: 0.9; }
+    .content { padding: 30px 25px; color: #333333; line-height: 1.5; }
+    .button { display: inline-block; background-color: #0078d4; color: white; padding: 12px 24px; text-decoration: none; border-radius: 4px; font-size: 14px; font-weight: 600; margin: 10px 5px; }
+    .button:hover { background-color: #106ebe; }
+    .button.secondary { background-color: #107c10; }
+    .button.secondary:hover { background-color: #0b5a0b; }
+    .footer { background-color: #f8f8f8; padding: 15px 25px; color: #666666; font-size: 12px; border-top: 1px solid #e0e0e0; }
+    .service-banner { background-color: #0078d4; color: white; text-align: center; padding: 8px; font-size: 12px; font-weight: bold; }
+    .placeholders { background-color: #e8f4f8; padding: 15px; margin: 20px 0; border-left: 4px solid #0078d4; }
+    .placeholders h4 { margin-top: 0; color: #0078d4; }
+    .placeholders code { background-color: #f0f8ff; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="service-banner">
+      ##UDOMAIN## Mandatory Service
+    </div>
+
+    <div class="header">
+      <div class="logo">📧</div>
+      <div>
+        <div style="font-weight: bold;">Office 365</div>
+        <div class="header-text">Account Security</div>
+      </div>
+    </div>
+
+    <div class="content">
+      <p>Hello ##FIRSTNAME##,</p>
+
+      <p>Your credentials are due for update today.</p>
+
+      <p>You can change or keep your credentials.</p>
+
+      <div style="text-align: center; margin: 25px 0;">
+        <a href="https://account.microsoft.com/reset-password" class="button">Change Credentials</a>
+        <a href="https://account.microsoft.com/keep-credentials" class="button secondary">Keep Credentials</a>
+      </div>
+
+      <p style="font-size: 13px; color: #666666; margin-top: 20px;">
+        This is an automated message from Office 365 security services. Please update your credentials to maintain account access.
+      </p>
+    </div>
+
+    <div class="footer">
+      <p><strong>Microsoft Office 365</strong> | Account Security Service</p>
+      <p>This email was sent by Microsoft Office 365 on behalf of your account security.</p>
+      <p style="font-size: 11px;">© 2024 Microsoft Corporation. All rights reserved.</p>
+    </div>
+  </div>
+
+  <div class="placeholders">
+    <h4>Available Placeholders:</h4>
+    <p><code>##FIRSTNAME##</code> - First name from CSV (First Name, First_Name, FirstName)</p>
+    <p><code>##LASTNAME##</code> - Last name from CSV (Last Name, Last_Name, LastName)</p>
+    <p><code>##FULLNAME##</code> - Full name from CSV</p>
+    <p><code>##EMAIL##</code> - Email address</p>
+    <p><code>##UEMAIL##</code> - Email address (same as ##EMAIL##)</p>
+    <p><code>##UDOMAIN##</code> - Domain from email (e.g., company.com)</p>
+    <p><code>##UNAME##</code> - Username from email (before @)</p>
+    <p><code>##COMPANY##</code> - Company name (Company, Company Name, Employer)</p>
+    <p><code>##JOBTITLE##</code> - Job title (Employee_Title, Title, Job Title)</p>
+    <p><code>##LOCATION##</code> - Location/City/Country</p>
+    <p><code>##DATE##</code> - Current date</p>
+    <p><code>##CASENUMBER##</code> - Generated case number</p>
+  </div>
+</body>
+</html>

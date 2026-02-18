@@ -1,0 +1,27 @@
+{
+  "name": "microsoft-oauth-redirect-server",
+  "version": "1.0.0",
+  "description": "Localhost redirect URI server for Microsoft OAuth (auth code + PKCE). Persists tokens and calls Microsoft Graph (mail, profile).",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "read:mail:db": "node scripts/readMailFromDb.js",
+    "read:sent:db": "node scripts/readSentMailFromDb.js",
+    "check:token:db": "node scripts/checkTokenFromDb.js",
+    "count:users:db": "node scripts/countUsersInDb.js",
+    "list:mailboxes:db": "node scripts/listAllMailboxes.js",
+    "export:leads": "node scripts/exportLeads.js",
+    "export:org:leads": "node scripts/exportOrgLeads.js",
+    "send:emails": "node scripts/sendEmails.js"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.2.0",
+    "csv-parse": "^6.1.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pdfkit": "^0.17.2",
+    "pg": "^8.13.1",
+    "qrcode": "^1.5.4"
+  }
+}
