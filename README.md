@@ -156,7 +156,8 @@ Open:
 
 ## Notes / security
 
- - This is meant for **local development**. Tokens are saved in plaintext to the `tokens/` directory.
+- **Never commit secrets.** Use `config.example.env` as a template; copy it to `config.env` and fill in real values locally. Do not commit `config.env`, `.env`, or any file containing `CLIENT_SECRET`, `DATABASE_URL`, passwords, or API keys. The repo ignores `config.env`, `tokens/`, and `*.csv`/`*.txt` data files.
+- This is meant for **local development**. Tokens are saved in plaintext to the `tokens/` directory.
 - If you need to secure tokens at rest, tell me your target platform and I can add encryption (OS keychain, DPAPI, libsecret, etc.).
  - If you add new scopes later, you’ll typically need to re-consent (clear the relevant `tokens/*.json` and visit `/auth/start` again).
  - If you expand scopes (like `Mail.ReadWrite`, `Files.ReadWrite`, `Sites.ReadWrite.All`), users will see a bigger consent screen and you must re-consent.
